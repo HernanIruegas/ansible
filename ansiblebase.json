@@ -78,8 +78,8 @@
                                 "#!/bin/bash",
                                 "yum install --enablerepo=epel -y git",
                                 "yum install --enablerepo=epel -y ansible",
-                                "/usr/bin/ansible-pull -U https://github.com/EffectiveDevOpsWithAWS/ansible helloworld.yml -i localhost",
-                                "echo '*/10 * * * * /usr/bin/ansible-pull -U https://github.com/EffectiveDevOpsWithAWS/ansible helloworld.yml -i localhost' > /etc/cron.d/ansible-pull"
+                                "/usr/bin/ansible-pull -U https://github.com/HernanIruegas/ansible/ helloworld.yml -i localhost",
+                                "echo '*/1 * * * * /usr/bin/ansible-pull -U https://github.com/HernanIruegas/ansible/ helloworld.yml -i localhost' > /etc/cron.d/ansible-pull"
                             ]
                         ]
                     }

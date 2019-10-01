@@ -112,11 +112,11 @@
                                 "#!/bin/bash",
                                 "rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm",
                                 "yum install epel-release",
-                                "sudo yum-config-manager --enable epel",
+                                "yum-config-manager --enable epel",
                                 "yum install --enablerepo=epel -y git",
                                 "yum install --enablerepo=epel -y ansible",
                                 "/usr/bin/ansible-pull -U https://github.com/HernanIruegas/ansible/ jenkins.yml -i localhost",
-                                "echo '*/10 * * * * /usr/bin/ansible-pull -U https://github.com/HernanIruegas/ansible/ jenkins.yml -i localhost' > /etc/cron.d/ansible-pull"
+                                "echo '*/2 * * * * /usr/bin/ansible-pull -U https://github.com/HernanIruegas/ansible/ jenkins.yml -i localhost' > /etc/cron.d/ansible-pull"
                             ]
                         ]
                     }
